@@ -1,5 +1,15 @@
-import React from 'react';
+  import React from 'react';
+  type props  = {
+    Question: string;
+    answer :  string[];
+    callback : any;
+    userAnwser : string;
+    questionNr: number;
+    totalQuestions: number;
+  }
 
-const QuestionCard =() => <div>Question Card</div>;
+const QuestionCard: React.FC <props>=() =>( 
+<div>Question Card</div>
+);
 
 export default QuestionCard;

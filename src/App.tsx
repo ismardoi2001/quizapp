@@ -11,9 +11,13 @@ function App() {
   }
   
   const nextQuestion =() => {
-    
+
   }
-  return <div className="App">Quiz App</div>
+  return (
+   <div className="App">
+     <h1>REACT.NATIVE QUIZ</h1>
+     </div>
+     );
  }
 
  export default App;

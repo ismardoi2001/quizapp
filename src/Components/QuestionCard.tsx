@@ -1,9 +1,9 @@
   import React from 'react';
   type props  = {
     qestion: string;
-    answer :  string[];
+    answers :  string[];
     callback : any;
-    userAnwser : string;
+    userAnwser : boolean;
     questionNr: number;
     totalQuestions: number;
   };
@@ -15,6 +15,20 @@
     userAnswer,
     questionNr,
     totalQuestions,
-}) => <div>Question Card</div>;
+}) => (
+<div>
+    <p className="number">
+        Question:{questionNr} /{totalQuestions}
+    </p>
+    <p dangerouslySetInnerHTML ={{__html:question}}/>
+    <div>
+    {answers.map{answer =>(
+    <div>
+        <button disabled={userAnswers}
+        </div>
+    )}}
+    </div>
+</div>
+);
 
 export default QuestionCard;

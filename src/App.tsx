@@ -1,33 +1,37 @@
-import React from 'react';
-// Componets
-import QuestionCard from './Components/QuestionCard';
-function App() {
+import React, { Component } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-  const startIrivia = async () => {
 
-  }
+import Home from './Components/Home';
+import Quiz from './Components/Quiz';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'App.css';
 
-  const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
 
-  }
+
+class App extends Component{
   
-  const nextQuestion =() => {
-
-  }
-  return (
-   <div className="App">
-     <h1>REACT.NATIVE QUIZ</h1>
-     <button className="start" onClick={startIrivia}>
-       Start
-     </button>
-     <p className="Score">Score:</p>
-     <p>Loading Question ...</p>
-     <QuestionCard />
-     <button className="next" onClick={nextQuestion}>
-       Next Question
-     </button>
-     </div>
-     );
- }
-
- export default App;
+  render(){
+   
+    return(
+      <BrowserRouter>
+    
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/easy">
+              <Quiz level='easy' questions={10} />
+            </Route>  
+            <Route exact path="/medium">
+              <Quiz level='medium' questions={10}/>
+            </Route>
+            <Route exact path="/hard">
+              <Quiz level='hard' questions={10}/>
+            </Route>                                  
+          </Switch>     
+      </BrowserRouter>
+    );
+  } 
+}
+export default App;

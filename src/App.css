@@ -1,0 +1,206 @@
+body{
+  overflow-x: hidden;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.maint {
+  height: 40vin;
+  color: #17a717;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #2b3428;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.myNavBar{
+  background-color: rgb(216, 92, 9) !important;
+}
+
+@media only screen and (max-width: 400px) {
+  .bgCup{
+    left: 5px;
+    top: 50px;
+    width: 80%;
+    display: none;
+  }
+}
+
+@keyframes upndown{
+  to{
+    top: 200px;
+  }  
+}
+
+@keyframes slideIn {
+  to{
+    left: 100%;
+  }
+}
+
+@keyframes rotation {
+  to{
+    transform: rotate(10deg);
+  }
+}
+
+.bgShape1{
+  border-radius: 60% 40% 30% 70% / 60% 30% 10% 40%;
+  background-color: rgba(255,255,255,0.08);
+  width:100%;
+  animation: bgShapeMovement 3s alternate-reverse infinite;
+  border:3px solid rgb(247, 231, 15);
+}
+
+.bgShape2{
+  border-radius: 70% 20% 50% 33% / 60% 30% 52% 40%;
+  background-color: rgba(255,255,255,0.08);
+  width:100%;
+  animation: bgShapeMovement2 3s alternate infinite;
+  border:3px solid rgb(24, 184, 32);
+}
+
+.bgShape3{
+  border-radius: 20% 60% 50% 10% / 60% 30% 70% 40%;
+  background-color: rgba(255,255,255,0.08);
+  width:100%;
+  border:3px solid rgb(190, 22, 50);
+  animation: bgShapeMovement3 3s alternate-reverse infinite;
+}
+
+@keyframes bgShapeMovement { 
+  to{
+    border-radius: 20% 40% 30% 70%;
+  }
+}
+
+@keyframes bgShapeMovement2 { 
+  to{
+    border-radius: 55% 20% 5% 55%;
+  }
+}
+
+@keyframes bgShapeMovement3 { 
+  to{
+    border-radius: 20% 5% 16% 50%;
+  }
+}
+
+.cardAnim{
+  background-color: '#DfDfDf';
+  color: green;
+}
+
+.cardAnim:hover
+{
+  animation : cardBounce 6s alternate-reverse infinite;
+}
+
+@keyframes cardBounce { 
+  to{
+    transform: translateY(-20px) scale(1.05);
+    box-shadow: 8px 8px 5px #11b82c ;
+  }
+}
+
+.easy{color:green;}
+.medium{color:blue;}
+.hard{color:red;}
+
+.easy, .medium, .hard{
+  text-transform: uppercase;
+}
+
+#about{
+  background-color: #ccc;
+}
+
+.box-area{
+  margin:0px;
+}
+
+.box-area li{
+  display: inline-block;
+  list-style: none;
+  margin: 30px 40px 10px 40px;
+}
+
+.box-area li img{
+  max-width:100px;
+}
+
+
+.bg-shapes{
+  margin:auto;
+  position: relative;
+  opacity: 0.8;
+}
+
+.bg-shapes div:nth-child(1) {
+  height: 80px;
+  width: 80px;
+  display: inline-block;
+  margin: 50px;
+  background-image: url("./Images/bootstrap.png");
+  background-size: cover;
+}
+
+.bg-shapes div:nth-child(2) {
+ height: 80px;
+ width: 80px;
+ display: inline-block;
+ margin: 50px;
+background-image: url("./images/typescript.png");
+background-size: cover;
+}
+
+.bg-shapes div:nth-child(3) {
+ height: 80px;
+ width: 160px;
+ display: inline-block;
+ margin: 50px;
+  background-image: url("./images/pdflib.png");
+  background-size: cover;
+}
+
+.bg-shapes div:nth-child(4) {
+  height:80px;
+  width: 80px;
+  margin: 50px;
+  display: inline-block;
+  background-image: url("./images/react.png");
+  background-size: cover;
+}
+
